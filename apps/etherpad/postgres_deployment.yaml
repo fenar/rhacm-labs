@@ -1,0 +1,346 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  generateName: postgresql-78c9659d68-
+  annotations:
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "openshift-sdn",
+          "interface": "eth0",
+          "ips": [
+              "10.131.0.18"
+          ],
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "openshift-sdn",
+          "interface": "eth0",
+          "ips": [
+              "10.131.0.18"
+          ],
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted
+  selfLink: /api/v1/namespaces/etherpad/pods/postgresql-78c9659d68-k6xxh
+  resourceVersion: '608303'
+  name: postgresql-78c9659d68-k6xxh
+  uid: 2aa4cdb7-56b9-4e11-93f2-7486e9aab02b
+  creationTimestamp: '2020-10-28T16:04:45Z'
+  managedFields:
+    - manager: kube-controller-manager
+      operation: Update
+      apiVersion: v1
+      time: '2020-10-28T16:04:45Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:generateName': {}
+          'f:labels':
+            .: {}
+            'f:name': {}
+            'f:pod-template-hash': {}
+          'f:ownerReferences':
+            .: {}
+            'k:{"uid":"c626c068-a6db-4a3c-ae3e-8b93af1aab19"}':
+              .: {}
+              'f:apiVersion': {}
+              'f:blockOwnerDeletion': {}
+              'f:controller': {}
+              'f:kind': {}
+              'f:name': {}
+              'f:uid': {}
+        'f:spec':
+          'f:containers':
+            'k:{"name":"postgresql"}':
+              'f:image': {}
+              'f:volumeMounts':
+                .: {}
+                'k:{"mountPath":"/var/lib/pgsql/data"}':
+                  .: {}
+                  'f:mountPath': {}
+                  'f:name': {}
+              'f:terminationMessagePolicy': {}
+              .: {}
+              'f:resources':
+                .: {}
+                'f:limits':
+                  .: {}
+                  'f:memory': {}
+                'f:requests':
+                  .: {}
+                  'f:memory': {}
+              'f:livenessProbe':
+                .: {}
+                'f:exec':
+                  .: {}
+                  'f:command': {}
+                'f:failureThreshold': {}
+                'f:initialDelaySeconds': {}
+                'f:periodSeconds': {}
+                'f:successThreshold': {}
+                'f:timeoutSeconds': {}
+              'f:env':
+                .: {}
+                'k:{"name":"POSTGRESQL_DATABASE"}':
+                  .: {}
+                  'f:name': {}
+                  'f:valueFrom':
+                    .: {}
+                    'f:secretKeyRef':
+                      .: {}
+                      'f:key': {}
+                      'f:name': {}
+                'k:{"name":"POSTGRESQL_PASSWORD"}':
+                  .: {}
+                  'f:name': {}
+                  'f:valueFrom':
+                    .: {}
+                    'f:secretKeyRef':
+                      .: {}
+                      'f:key': {}
+                      'f:name': {}
+                'k:{"name":"POSTGRESQL_USER"}':
+                  .: {}
+                  'f:name': {}
+                  'f:valueFrom':
+                    .: {}
+                    'f:secretKeyRef':
+                      .: {}
+                      'f:key': {}
+                      'f:name': {}
+              'f:readinessProbe':
+                .: {}
+                'f:exec':
+                  .: {}
+                  'f:command': {}
+                'f:failureThreshold': {}
+                'f:initialDelaySeconds': {}
+                'f:periodSeconds': {}
+                'f:successThreshold': {}
+                'f:timeoutSeconds': {}
+              'f:securityContext':
+                .: {}
+                'f:capabilities': {}
+                'f:privileged': {}
+              'f:terminationMessagePath': {}
+              'f:imagePullPolicy': {}
+              'f:ports':
+                .: {}
+                'k:{"containerPort":5432,"protocol":"TCP"}':
+                  .: {}
+                  'f:containerPort': {}
+                  'f:protocol': {}
+              'f:name': {}
+          'f:dnsPolicy': {}
+          'f:enableServiceLinks': {}
+          'f:restartPolicy': {}
+          'f:schedulerName': {}
+          'f:securityContext': {}
+          'f:terminationGracePeriodSeconds': {}
+          'f:volumes':
+            .: {}
+            'k:{"name":"postgresql-data"}':
+              .: {}
+              'f:emptyDir': {}
+              'f:name': {}
+    - manager: multus
+      operation: Update
+      apiVersion: v1
+      time: '2020-10-28T16:04:48Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            'f:k8s.v1.cni.cncf.io/network-status': {}
+            'f:k8s.v1.cni.cncf.io/networks-status': {}
+    - manager: kubelet
+      operation: Update
+      apiVersion: v1
+      time: '2020-10-28T16:04:56Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:status':
+          'f:conditions':
+            'k:{"type":"ContainersReady"}':
+              .: {}
+              'f:lastProbeTime': {}
+              'f:lastTransitionTime': {}
+              'f:status': {}
+              'f:type': {}
+            'k:{"type":"Initialized"}':
+              .: {}
+              'f:lastProbeTime': {}
+              'f:lastTransitionTime': {}
+              'f:status': {}
+              'f:type': {}
+            'k:{"type":"Ready"}':
+              .: {}
+              'f:lastProbeTime': {}
+              'f:lastTransitionTime': {}
+              'f:status': {}
+              'f:type': {}
+          'f:containerStatuses': {}
+          'f:hostIP': {}
+          'f:phase': {}
+          'f:podIP': {}
+          'f:podIPs':
+            .: {}
+            'k:{"ip":"10.131.0.18"}':
+              .: {}
+              'f:ip': {}
+          'f:startTime': {}
+  namespace: etherpad
+  ownerReferences:
+    - apiVersion: apps/v1
+      kind: ReplicaSet
+      name: postgresql-78c9659d68
+      uid: c626c068-a6db-4a3c-ae3e-8b93af1aab19
+      controller: true
+      blockOwnerDeletion: true
+  labels:
+    name: postgresql
+    pod-template-hash: 78c9659d68
+spec:
+  restartPolicy: Always
+  serviceAccountName: default
+  imagePullSecrets:
+    - name: default-dockercfg-vs5rv
+  priority: 0
+  schedulerName: default-scheduler
+  enableServiceLinks: true
+  terminationGracePeriodSeconds: 30
+  nodeName: ocp45ipi-tdwzd-worker-qqfw9
+  securityContext:
+    seLinuxOptions:
+      level: 's0:c25,c0'
+    fsGroup: 1000600000
+  containers:
+    - resources:
+        limits:
+          memory: 512Mi
+        requests:
+          memory: 512Mi
+      readinessProbe:
+        exec:
+          command:
+            - /usr/libexec/check-container
+        initialDelaySeconds: 5
+        timeoutSeconds: 1
+        periodSeconds: 10
+        successThreshold: 1
+        failureThreshold: 3
+      terminationMessagePath: /dev/termination-log
+      name: postgresql
+      livenessProbe:
+        exec:
+          command:
+            - /usr/libexec/check-container
+            - '--live'
+        initialDelaySeconds: 120
+        timeoutSeconds: 10
+        periodSeconds: 10
+        successThreshold: 1
+        failureThreshold: 3
+      env:
+        - name: POSTGRESQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: ether
+              key: database-user
+        - name: POSTGRESQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: ether
+              key: database-password
+        - name: POSTGRESQL_DATABASE
+          valueFrom:
+            secretKeyRef:
+              name: ether
+              key: database-name
+      securityContext:
+        capabilities:
+          drop:
+            - KILL
+            - MKNOD
+            - SETGID
+            - SETUID
+        privileged: false
+        runAsUser: 1000600000
+      ports:
+        - containerPort: 5432
+          protocol: TCP
+      imagePullPolicy: IfNotPresent
+      volumeMounts:
+        - name: postgresql-data
+          mountPath: /var/lib/pgsql/data
+        - name: default-token-r6h4t
+          readOnly: true
+          mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      terminationMessagePolicy: File
+      image: >-
+        registry.redhat.io/rhscl/postgresql-10-rhel7@sha256:5c4f5f52a37718a9a1997ba212ef172694475558c35232b56dac638529c5b569
+  serviceAccount: default
+  volumes:
+    - name: postgresql-data
+      persistentVolumeClaim:
+        claimName: postgresql
+    - name: default-token-r6h4t
+      secret:
+        secretName: default-token-r6h4t
+        defaultMode: 420
+  dnsPolicy: ClusterFirst
+  tolerations:
+    - key: node.kubernetes.io/not-ready
+      operator: Exists
+      effect: NoExecute
+      tolerationSeconds: 300
+    - key: node.kubernetes.io/unreachable
+      operator: Exists
+      effect: NoExecute
+      tolerationSeconds: 300
+    - key: node.kubernetes.io/memory-pressure
+      operator: Exists
+      effect: NoSchedule
+status:
+  phase: Running
+  conditions:
+    - type: Initialized
+      status: 'True'
+      lastProbeTime: null
+      lastTransitionTime: '2020-10-28T16:04:45Z'
+    - type: Ready
+      status: 'True'
+      lastProbeTime: null
+      lastTransitionTime: '2020-10-28T16:04:56Z'
+    - type: ContainersReady
+      status: 'True'
+      lastProbeTime: null
+      lastTransitionTime: '2020-10-28T16:04:56Z'
+    - type: PodScheduled
+      status: 'True'
+      lastProbeTime: null
+      lastTransitionTime: '2020-10-28T16:04:45Z'
+  hostIP: 172.27.103.198
+  podIP: 10.131.0.18
+  podIPs:
+    - ip: 10.131.0.18
+  startTime: '2020-10-28T16:04:45Z'
+  containerStatuses:
+    - restartCount: 0
+      started: true
+      ready: true
+      name: postgresql
+      state:
+        running:
+          startedAt: '2020-10-28T16:04:48Z'
+      imageID: >-
+        registry.redhat.io/rhscl/postgresql-10-rhel7@sha256:5c4f5f52a37718a9a1997ba212ef172694475558c35232b56dac638529c5b569
+      image: >-
+        registry.redhat.io/rhscl/postgresql-10-rhel7@sha256:5c4f5f52a37718a9a1997ba212ef172694475558c35232b56dac638529c5b569
+      lastState: {}
+      containerID: 'cri-o://f6030164a881c6b9600199035e7c65c8c4332853f3a46b9848b5c2ef259190b3'
+  qosClass: Burstable
+
